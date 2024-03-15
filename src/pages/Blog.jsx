@@ -8,14 +8,14 @@ const Blog = () => {
   useEffect(() => {
     const getFetch = async () => {
       try {
-        const response = await fetch(
+        const request = await fetch(
           "https://api.spaceflightnewsapi.net/v3/articles"
         );
-        const request = await response.json();
+        const response = await request.json();
 
-        setArticles(request);
+        setArticles(response);
         setLoading(false);
-        console.log(request);
+        console.log(response);
       } catch (error) {
         console.log("Fetch Error:", error);
       }
