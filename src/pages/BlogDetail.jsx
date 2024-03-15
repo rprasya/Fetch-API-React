@@ -42,8 +42,8 @@ const BlogDetail = () => {
           <h2>{article.title}</h2>
           <time>{new Date(article.publishedAt).toLocaleDateString()}</time>
           <img src={article.imageUrl} alt={article.title} className="w-[500px]" />
-          <p>{article.summary}</p>
-          <p>
+          <p className="w-[1000px]">{article.summary}</p>
+          <p className="mb-5">
             Source:{" "}
             <a className="hover:text-blue-800 hover:underline" href={article.url} target="_blank" rel="noreferrer">
               {article.newsSite}
